@@ -1,0 +1,16 @@
+language: 'typescript'
+
+tasks:
+  dev:
+    command: 'pnpm run dev'
+    inputs:
+      - 'src/**/*'
+
+  build:
+    command: 'pnpm run build'
+    inputs:
+      - 'src/**/*'
+
+    outputs:
+      - 'dist'
+

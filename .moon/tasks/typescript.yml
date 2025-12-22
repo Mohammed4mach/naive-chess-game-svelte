@@ -1,0 +1,10 @@
+tasks:
+  format-check:
+    command: "prettier --check ."
+
+  lint:
+    command: "eslint . --cache --cache-strategy content"
+
+  typecheck:
+    command: "tsc --build --pretty --verbose"
+
