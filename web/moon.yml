@@ -3,14 +3,13 @@ language: 'typescript'
 tasks:
   dev:
     command: 'pnpm run dev'
-    inputs:
-      - 'src/**/*'
+
+  storybook:
+    command: 'pnpm run storybook'
 
   build:
     command: 'pnpm run build'
     inputs:
       - 'src/**/*'
-
     outputs:
       - 'dist'
-

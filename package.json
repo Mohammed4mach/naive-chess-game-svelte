@@ -10,20 +10,10 @@
     "globals": "^16.5.0",
     "prettier": "3.7.4",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.50.1",
-    "@inlang/paraglide-js": "2.7.0",
-    "@inlang/cli": "^3.0.0"
+    "typescript-eslint": "^8.50.1"
   },
   "packageManager": "pnpm@10.25.0",
   "engines": {
     "node": "25.1.0"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "tailwindcss": "^4.1.18"
-  },
-  "scripts": {
-    "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
-    "machine-translate": "inlang machine translate --project project.inlang"
   }
 }

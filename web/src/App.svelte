@@ -1,23 +1,19 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  import { setLocale, getLocale } from '$lib/paraglide/runtime';
+  import { m } from '$lib/paraglide/messages';
+  import { Button } from '@components';
+
+  let locale = getLocale();
+  let toggleLocale = () => locale === 'en' ? setLocale('ar') : setLocale('en');
 </script>
 
 <main>
-  <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
+  <section class="flex min-w-6">
+    <Button onclick={toggleLocale}>{locale == 'en' ? 'العربية' : 'English'}</Button>
+  </section>
 
-  <div class="card">
-    <Counter />
-  </div>
+  <h1>Vite + Svelte</h1>
+  <h2>{m.hello_user({username: 'Moha4mach'})}</h2>
 
   <p>
     Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
